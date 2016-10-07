@@ -24,7 +24,7 @@ public class ConstraintContextDialog extends ProcessContextDialog {
     }
 
     @Override
-    protected ConstraintContext getDialogObject() {
+    public ConstraintContext getDialogObject() {
         return (ConstraintContext) super.getDialogObject();
     }
 

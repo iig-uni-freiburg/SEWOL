@@ -27,7 +27,7 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.border.LineBorder;
 
 import de.invation.code.toval.graphic.dialog.AbstractEditCreateDialog;
-import de.invation.code.toval.graphic.dialog.DefineGenerateDialog;
+import de.invation.code.toval.graphic.dialog.ValueEditingDialog;
 import de.invation.code.toval.graphic.renderer.AlternatingRowColorListCellRenderer;
 import de.invation.code.toval.validate.CompatibilityException;
 import de.invation.code.toval.validate.ParameterException;
@@ -88,7 +88,7 @@ public class RoleLatticeDialog extends AbstractEditCreateDialog<RoleLattice> imp
     }
 
     @Override
-    protected RoleLattice getDialogObject() {
+    public RoleLattice getDialogObject() {
         return (RoleLattice) super.getDialogObject();
     }
 
@@ -129,7 +129,7 @@ public class RoleLatticeDialog extends AbstractEditCreateDialog<RoleLattice> imp
                 public void actionPerformed(ActionEvent e) {
                     List<String> newRoles = null;
                     try {
-                        newRoles = DefineGenerateDialog.showDialog(RoleLatticeDialog.this, "Roles");
+                        newRoles = ValueEditingDialog.showDialog(RoleLatticeDialog.this, "Roles", String.class);
                     } catch (Exception e2) {
                         internalException("Cannot launch value chooser dialog dialog.", e2);
                     }

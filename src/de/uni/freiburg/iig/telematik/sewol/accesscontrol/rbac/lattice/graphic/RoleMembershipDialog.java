@@ -155,7 +155,7 @@ public class RoleMembershipDialog extends AbstractDialog {
 	}
 	
 	@Override
-	protected RBACModel getDialogObject() {
+	public RBACModel getDialogObject() {
 		return (RBACModel) super.getDialogObject();
 	}
 	

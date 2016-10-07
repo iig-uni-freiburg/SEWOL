@@ -245,7 +245,7 @@ public class ACModelChooserDialog extends AbstractDialog {
 	protected void validateNewModel(AbstractACModel newModel) throws Exception {}
 	
 	@Override
-	protected AbstractACModel getDialogObject() {
+	public AbstractACModel getDialogObject() {
 		return (AbstractACModel) super.getDialogObject();
 	}
 	

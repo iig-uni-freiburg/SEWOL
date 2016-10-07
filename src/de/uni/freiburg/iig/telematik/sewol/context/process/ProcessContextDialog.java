@@ -40,7 +40,7 @@ public class ProcessContextDialog extends SOABaseDialog {
     }
 
     @Override
-    protected ProcessContext getDialogObject() {
+    public ProcessContext getDialogObject() {
         return (ProcessContext) super.getDialogObject();
     }
 
